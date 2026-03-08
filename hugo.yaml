@@ -1,0 +1,98 @@
+baseURL: "https://uvshield.kr/"
+languageCode: "ko"
+title: "UV Shield — 자외선 차단 전문 매거진"
+theme: "PaperMod"
+
+defaultContentLanguage: "ko"
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+params:
+  env: production
+  title: "UV Shield"
+  description: "자외선 차단에 대한 과학적, 중립적 정보를 전달하는 전문 매거진. UPF, UV 차단 기술, 실측 테스트, 연구 리포트를 제공합니다."
+  keywords: ["UV 차단", "자외선", "UPF", "UV 지수", "자외선 차단 과학", "UV Shield"]
+  author: "UV Shield"
+  images: ["/images/og-default.jpg"]
+  DateFormat: "2006년 1월 2일"
+
+  defaultTheme: dark
+  disableThemeToggle: false
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: false
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  hidemeta: false
+  hideSummary: false
+
+  homeInfoParams:
+    Title: "🛡️ UV Shield"
+    Content: >
+      자외선 차단의 모든 것을 과학적으로 분석합니다.
+      중립적 시각, 실측 데이터, 전문 연구 기반의 UV 차단 정보 매거진.
+
+  socialIcons:
+    - name: rss
+      url: "/index.xml"
+
+  analytics:
+    google:
+      SiteVerificationTag: ""
+
+  cover:
+    hidden: false
+    hiddenInList: false
+    hiddenInSingle: false
+
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+
+menu:
+  main:
+    - identifier: search
+      name: "🔍 검색"
+      url: /search/
+      weight: 1
+    - identifier: categories
+      name: "📂 카테고리"
+      url: /categories/
+      weight: 2
+    - identifier: tags
+      name: "🏷️ 태그"
+      url: /tags/
+      weight: 3
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+sitemap:
+  changeFreq: "weekly"
+  filename: "sitemap.xml"
+  priority: 0.5
+
+taxonomies:
+  category: categories
+  tag: tags
